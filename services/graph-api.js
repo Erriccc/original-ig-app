@@ -27,7 +27,8 @@ module.exports = class GraphApi {
       body: JSON.stringify(requestBody)
     });
     if (!response.ok) {
-      console.warn(`Could not sent message.`, response.statusText);
+      console.warn(`Could not sent message.`, response); 
+      console.warn(`Could not sent message.`, response.statusText); 
     }
   }
 
