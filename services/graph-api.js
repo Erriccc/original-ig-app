@@ -71,6 +71,7 @@ module.exports = class GraphApi {
       console.log(`Icebreakers have been set.`);
     } else {
       console.warn(`Error setting ice breakers`, response.statusText);
+      console.log(response)
     }
   }
 
@@ -92,6 +93,7 @@ module.exports = class GraphApi {
       console.log(`Persistent Menu has been set.`);
     } else {
       console.warn(`Error setting Persistent Menu`, response.statusText);
+      console.log(response)
     }
   }
 
@@ -108,6 +110,7 @@ module.exports = class GraphApi {
       console.log(`Page subscriptions have been set.`);
     } else {
       console.warn(`Error setting page subscriptions`, response.statusText);
+      console.log(response)
     }
   }
 };
