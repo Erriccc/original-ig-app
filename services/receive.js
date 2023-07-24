@@ -217,15 +217,15 @@ module.exports = class Receive {
     let quickReplies = [
   {
     content_type: "text",
-    title: i18n.__("option_1"),
+    title: i18n.__("Jollof Rice"),
     payload: "OPTION_1_PAYLOAD",
-    image_url: "https://i.insider.com/5fcebcd0037cbd0018614683?width=2000&format=jpeg&auto=webp"
+    image_url: "https://frzbawsadhmmltokvexj.supabase.co/storage/v1/object/public/randompublicbuckeyt/99D9751D-42C6-4A31-AC0C-C11E5AB52CEF_1000x.webp"
   },
   {
     content_type: "text",
-    title: i18n.__("option_2"),
+    title: i18n.__("FUFU"),
     payload: "OPTION_2_PAYLOAD",
-    image_url: "https://i.insider.com/5fcebcd0037cbd0018614683?width=2000&format=jpeg&auto=webp"
+    image_url: "https://frzbawsadhmmltokvexj.supabase.co/storage/v1/object/public/randompublicbuckeyt/86E207EF-1F88-4281-92F1-E08AD28C2E76_1000x.webp"
   },
   // {
   //   content_type: "user_phone_number"
