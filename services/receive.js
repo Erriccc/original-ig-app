@@ -218,34 +218,34 @@ module.exports = class Receive {
       recipient: {
         [type]: object_id
       },
-      messaging_type: "UPDATE",
-      message: {
-        "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"button",
-            "text":"Of course, what is your budget for the gift?",
-            "buttons":[
-                {
-                    "type": "postback",
-                    "title": "LESS THAN $20.",
-                    "payload": "GIFT_BUDGET_20_PAYLOAD"
-                },
-                {
-                    "type": "postback",
-                    "title": "$20 TO $50",
-                    "payload": "GIFT_BUDGET_20_TO_50_PAYLOAD"
-                },
-                {
-                    "type": "postback",
-                    "title": "MORE THAN $50",
-                    "payload": "GIFT_BUDGET_50_PAYLOAD"
-                }
-            ]
-          }
-        }
-      },
-      // message: Response.genText(i18n.__("private_reply.post")),
+      // messaging_type: "UPDATE",
+      // message: {
+      //   "attachment":{
+      //     "type":"template",
+      //     "payload":{
+      //       "template_type":"button",
+      //       "text":"Of course, what is your budget for the gift?",
+      //       "buttons":[
+      //           {
+      //               "type": "postback",
+      //               "title": "LESS THAN $20.",
+      //               "payload": "GIFT_BUDGET_20_PAYLOAD"
+      //           },
+      //           {
+      //               "type": "postback",
+      //               "title": "$20 TO $50",
+      //               "payload": "GIFT_BUDGET_20_TO_50_PAYLOAD"
+      //           },
+      //           {
+      //               "type": "postback",
+      //               "title": "MORE THAN $50",
+      //               "payload": "GIFT_BUDGET_50_PAYLOAD"
+      //           }
+      //       ]
+      //     }
+      //   }
+      // },
+      message: Response.genText(i18n.__("private_reply.post")),
       // tag: "HUMAN_AGENT"
     };
 
