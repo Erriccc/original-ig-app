@@ -18,9 +18,12 @@ const config = require("./config"),
 module.exports = class GraphApi {
   static async callSendApi(requestBody) {
     let url = new URL(`${config.apiUrl}/me/messages`);
+    console.log("requestBody:.....", requestBody)
     url.search = new URLSearchParams({
       access_token: config.pageAccesToken
     });
+    console.log('URL:.....',url)
+    console.log('URL.Search:.....',url.search && url.search)
     let response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
