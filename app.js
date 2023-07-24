@@ -1,13 +1,4 @@
-/**
- * Copyright 2021-present, Facebook, Inc. All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
 "use strict";
-
 // Import dependencies and set up http server
 const express = require("express"),
   { urlencoded, json } = require("body-parser"),
@@ -210,19 +201,24 @@ async function main() {
       call_to_actions: [
         {
           type: "postback",
-          title: "Talk to an agent",
-          payload: "CARE_HELP"
+          title: "Menu",
+          payload: "MAIN_MENU"
         },
         {
           type: "postback",
-          title: "Outfit suggestions",
+          title: "Billing",
           payload: "CURATION"
         },
         {
-          type: "web_url",
-          title: "Shop now",
-          url: "https://www.originalcoastclothing.com/"
-        }
+          type: "postback",
+          title: "Talk to an agent",
+          payload: "CARE_HELP"
+        },
+        // {
+        //   type: "web_url",
+        //   title: "Shop now",
+        //   url: "https://www.originalcoastclothing.com/"
+        // }
       ]
     }
   ];
