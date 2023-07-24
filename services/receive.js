@@ -227,12 +227,12 @@ module.exports = class Receive {
     payload: "OPTION_2_PAYLOAD",
     image_url: "https://example.com/image2.png"
   },
-  // {
-  //   content_type: "user_phone_number"
-  // },
-  // {
-  //   content_type: "user_email"
-  // }
+  {
+    content_type: "user_phone_number"
+  },
+  {
+    content_type: "user_email"
+  }
 ];
     
 
