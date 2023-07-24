@@ -13,22 +13,47 @@
 const i18n = require("../i18n.config");
 
 module.exports = class Response {
+  // static genQuickReply(text, quickReplies) {
+  //   let response = {
+  //     text: text,
+  //     quick_replies: []
+  //   };
+
+  //   for (let quickReply of quickReplies) {
+  //     response["quick_replies"].push({
+  //       content_type: "text",
+  //       title: quickReply["title"],
+  //       payload: quickReply["payload"]
+  //     });
+  //   }
+
+  //   return response;
+  // }
   static genQuickReply(text, quickReplies) {
     let response = {
       text: text,
       quick_replies: []
     };
-
+  
     for (let quickReply of quickReplies) {
-      response["quick_replies"].push({
-        content_type: "text",
-        title: quickReply["title"],
-        payload: quickReply["payload"]
-      });
+      let reply = {
+        content_type: quickReply["content_type"]
+      };
+  
+      if (quickReply["content_type"] === "text") {
+        reply["title"] = quickReply["title"];
+        reply["payload"] = quickReply["payload"];
+        if (quickReply["image_url"]) {
+          reply["image_url"] = quickReply["image_url"];
+        }
+      }
+  
+      response["quick_replies"].push(reply);
     }
-
+  
     return response;
   }
+  
 
   static genImage(url) {
     let response = {
@@ -86,7 +111,7 @@ module.exports = class Response {
     let welcome = this.genText(
       i18n.__("get_started.welcome", {
         userName: user.name
-      })
+      }) 
     );
 
     let guide = this.genText(i18n.__("get_started.guidance"));

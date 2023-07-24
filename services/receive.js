@@ -214,6 +214,28 @@ module.exports = class Receive {
     // NOTE: For production, private replies must be sent by a human agent.
     // This code is for illustrative purposes only.
 
+    let quickReplies = [
+  {
+    content_type: "text",
+    title: i18n.__("quick_reply.option_1"),
+    payload: "OPTION_1_PAYLOAD",
+    image_url: "https://example.com/image1.png"
+  },
+  {
+    content_type: "text",
+    title: i18n.__("quick_reply.option_2"),
+    payload: "OPTION_2_PAYLOAD",
+    image_url: "https://example.com/image2.png"
+  },
+  {
+    content_type: "user_phone_number"
+  },
+  {
+    content_type: "user_email"
+  }
+];
+    
+
     let requestBody = {
       recipient: {
         [type]: object_id
@@ -245,8 +267,12 @@ module.exports = class Receive {
       //     }
       //   }
       // },
-      message: Response.genText(i18n.__("private_reply.post")),
+      // message: Response.genText(i18n.__("private_reply.post")),
+      message: Response.genQuickReply(i18n.__("private_reply.post"), quickReplies),
+      
+      
       // tag: "HUMAN_AGENT"
+      
     };
 
     GraphApi.callSendApi(requestBody);
