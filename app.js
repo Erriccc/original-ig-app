@@ -199,11 +199,11 @@ async function main() {
     {
       locale: "default",
       call_to_actions: [
-        {
-          type: "postback",
-          title: "Menu",
-          payload: "MAIN_MENU"
-        },
+        // {
+        //   type: "postback",
+        //   title: "Menu",
+        //   payload: "MAIN_MENU"
+        // },
         {
           type: "postback",
           title: "Billing",
@@ -214,11 +214,11 @@ async function main() {
           title: "Talk to an agent",
           payload: "CARE_HELP"
         },
-        // {
-        //   type: "web_url",
-        //   title: "Shop now",
-        //   url: "https://www.originalcoastclothing.com/"
-        // }
+        {
+          type: "web_url",
+          title: "Shop Menu",
+          url: "https://www.originalcoastclothing.com/"
+        }
       ]
     }
   ];

@@ -219,13 +219,13 @@ module.exports = class Receive {
     content_type: "text",
     title: i18n.__("option_1"),
     payload: "OPTION_1_PAYLOAD",
-    image_url: "https://unsplash.com/photos/V5vqWC9gyEU"
+    image_url: "../public/logo.png"
   },
   {
     content_type: "text",
     title: i18n.__("option_2"),
     payload: "OPTION_2_PAYLOAD",
-    image_url: "https://unsplash.com/photos/V5vqWC9gyEU"
+    image_url: "../public/logo.png"
   },
   // {
   //   content_type: "user_phone_number"
