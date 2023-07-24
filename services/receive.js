@@ -217,22 +217,22 @@ module.exports = class Receive {
     let quickReplies = [
   {
     content_type: "text",
-    title: i18n.__("quick_reply.option_1"),
+    title: i18n.__("option_1"),
     payload: "OPTION_1_PAYLOAD",
     image_url: "https://example.com/image1.png"
   },
   {
     content_type: "text",
-    title: i18n.__("quick_reply.option_2"),
+    title: i18n.__("option_2"),
     payload: "OPTION_2_PAYLOAD",
     image_url: "https://example.com/image2.png"
   },
-  {
-    content_type: "user_phone_number"
-  },
-  {
-    content_type: "user_email"
-  }
+  // {
+  //   content_type: "user_phone_number"
+  // },
+  // {
+  //   content_type: "user_email"
+  // }
 ];
     
 
