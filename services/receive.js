@@ -218,6 +218,7 @@ module.exports = class Receive {
       recipient: {
         [type]: object_id
       },
+      messaging_type: "UPDATE",
       message: {
         "attachment":{
           "type":"template",
