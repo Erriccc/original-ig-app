@@ -219,20 +219,20 @@ module.exports = class Receive {
     content_type: "text",
     title: i18n.__("option_1"),
     payload: "OPTION_1_PAYLOAD",
-    image_url: "https://example.com/image1.png"
+    image_url: "https://unsplash.com/photos/V5vqWC9gyEU"
   },
   {
     content_type: "text",
     title: i18n.__("option_2"),
     payload: "OPTION_2_PAYLOAD",
-    image_url: "https://example.com/image2.png"
+    image_url: "https://unsplash.com/photos/V5vqWC9gyEU"
   },
-  {
-    content_type: "user_phone_number"
-  },
-  {
-    content_type: "user_email"
-  }
+  // {
+  //   content_type: "user_phone_number"
+  // },
+  // {
+  //   content_type: "user_email"
+  // }
 ];
     
 
@@ -240,39 +240,9 @@ module.exports = class Receive {
       recipient: {
         [type]: object_id
       },
-      // messaging_type: "UPDATE",
-      // message: {
-      //   "attachment":{
-      //     "type":"template",
-      //     "payload":{
-      //       "template_type":"button",
-      //       "text":"Of course, what is your budget for the gift?",
-      //       "buttons":[
-      //           {
-      //               "type": "postback",
-      //               "title": "LESS THAN $20.",
-      //               "payload": "GIFT_BUDGET_20_PAYLOAD"
-      //           },
-      //           {
-      //               "type": "postback",
-      //               "title": "$20 TO $50",
-      //               "payload": "GIFT_BUDGET_20_TO_50_PAYLOAD"
-      //           },
-      //           {
-      //               "type": "postback",
-      //               "title": "MORE THAN $50",
-      //               "payload": "GIFT_BUDGET_50_PAYLOAD"
-      //           }
-      //       ]
-      //     }
-      //   }
-      // },
       // message: Response.genText(i18n.__("private_reply.post")),
       message: Response.genQuickReply(i18n.__("private_reply.post"), quickReplies),
-      
-      
       // tag: "HUMAN_AGENT"
-      
     };
 
     GraphApi.callSendApi(requestBody);
