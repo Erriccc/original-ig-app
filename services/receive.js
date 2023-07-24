@@ -228,7 +228,7 @@ module.exports = class Receive {
             "buttons":[
                 {
                     "type": "postback",
-                    "title": "LESS THAN $20",
+                    "title": "LESS THAN $20.",
                     "payload": "GIFT_BUDGET_20_PAYLOAD"
                 },
                 {
