@@ -74,6 +74,7 @@ app.get("/webhook", (req, res) => {
 // Add support for POST requests to our webhook
 // Called whenever messages occur in the conversation.
 app.post("/webhook", (req, res) => {
+  console.log('new state update received')
   let body = req.body;
 
   console.log(`\u{1F7EA} Received webhook:`);
@@ -167,7 +168,6 @@ function verifyRequestSignature(req, res, buf) {
 async function main() {
   // Check if all environment variables are set
   config.checkEnvVariables();
-
   // Set configured locale
   if (config.locale) {
     i18n.setLocale(config.locale);
@@ -191,7 +191,6 @@ async function main() {
       payload: "CURATION"
     }
   ];
-
   // Set our Icebreakers upon launch
   await GraphApi.setIcebreakers(iceBreakers);
 
@@ -199,11 +198,6 @@ async function main() {
     {
       locale: "default",
       call_to_actions: [
-        // {
-        //   type: "postback",
-        //   title: "Menu",
-        //   payload: "MAIN_MENU"
-        // },
         {
           type: "postback",
           title: "Billing",
@@ -222,13 +216,10 @@ async function main() {
       ]
     }
   ];
-
   // Set our Persistent Menu upon launch
   await GraphApi.setPersistentMenu(persistentMenu);
-
   // Set our page subscriptions
   await GraphApi.setPageSubscriptions();
-
   // Listen for requests :)
   var listener = app.listen(config.port, function() {
     console.log(`The app is listening on port ${listener.address().port}`);
