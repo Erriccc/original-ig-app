@@ -192,7 +192,7 @@ async function main() {
     }
   ];
   // Set our Icebreakers upon launch
-  await GraphApi.setIcebreakers(iceBreakers);
+  // await GraphApi.setIcebreakers(iceBreakers);
 
   const persistentMenu = [
     {
