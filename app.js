@@ -219,7 +219,7 @@ async function main() {
   // Set our Persistent Menu upon launch
   await GraphApi.setPersistentMenu(persistentMenu);
   // Set our page subscriptions
-  await GraphApi.setPageSubscriptions();
+  // await GraphApi.setPageSubscriptions();
   // Listen for requests :)
   var listener = app.listen(config.port, function() {
     console.log(`The app is listening on port ${listener.address().port}`);
