@@ -29,6 +29,7 @@ app.use(express.static(path.join(path.resolve(), "public")));
 
 // Find the URL we're serving from
 app.all("*", function(req, res, next) {
+  console.log('hmmmmm')
   // "x-forwarded-proto" will have https even when tunnelling to local
   const reqProtocol = req.get("x-forwarded-proto")
     ? req.get("x-forwarded-proto").split(",")[0]
